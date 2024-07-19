@@ -1,11 +1,13 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Markazi Text', serif;
   line-height: 1.5;
   font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  --color-primary: #495e57;
+  --color-primary-light: #f4ce17;
+  --color-orange: #ee9972;
+  --color-orange-light: #fdbabb;
+  --color-gray: #edefee;
+  --color-gray-dark: #333333;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -13,26 +15,80 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
 a:hover {
   color: #535bf2;
 }
 
 body {
   margin: 0;
-  display: flex;
+  padding: 0;
   place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
 }
 
+/* Reiniciar márgenes por defecto */
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+/* Estilos personalizados */
 h1 {
-  font-size: 3.2em;
+  font-size: 64px;
   line-height: 1.1;
+  margin-bottom: 20px; /* Espaciado personalizado */
+}
+h2 {
+  font-size: 40px;
+  line-height: 1.1;
+  margin-bottom: 15px; /* Espaciado personalizado */
+}
+h3 {
+  font-size: 20px;
+  line-height: 1.1;
+  margin-bottom: 10px; /* Espaciado personalizado */
+}
+p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 10px; /* Espaciado personalizado */
+}
+
+label {
+  font-size: 20px;
+  line-height: 1.1;
+  display: block;
+  margin-bottom: 0.5em;
+  font-weight: 700;
+}
+
+select {
+  font-size: 18px;
+  line-height: 1.5;
+  border-radius: 8px;
+  border: 1px solid #d1d1d1;
+  width: 100%;
+  margin-bottom: 1em;
+  padding: 0.8em 0.6em;
+}
+input {
+  font-size: 18px;
+  line-height: 1.5;
+  border-radius: 8px;
+  border: 1px solid #d1d1d1;
+  width: 100%;
+  margin-bottom: 1em;
+  padding: 0.6em 0em;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 button {
@@ -52,6 +108,46 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* Colores de texto */
+.color-primary {
+  color: var(--color-primary);
+}
+.color-primary-light {
+  color: var(--color-primary-light);
+}
+.color-orange {
+  color: var(--color-orange);
+}
+.color-orange-light {
+  color: var(--color-orange-light);
+}
+.color-gray {
+  color: var(--color-gray);
+}
+.color-gray-dark {
+  color: var(--color-gray-dark);
+}
+
+/* Colores de fondo */
+.bg-primary {
+  background-color: var(--color-primary);
+}
+.bg-primary-light {
+  background-color: var(--color-primary-light);
+}
+.bg-orange {
+  background-color: var(--color-orange);
+}
+.bg-orange-light {
+  background-color: var(--color-orange-light);
+}
+.bg-gray {
+  background-color: var(--color-gray);
+}
+.bg-gray-dark {
+  background-color: var(--color-gray-dark);
 }
 
 @media (prefers-color-scheme: light) {

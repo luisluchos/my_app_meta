@@ -1,5 +1,5 @@
 import React from 'react'
 
 export const Header = () => {
-  return <header>Header</header>
+  return <header className='row'></header>
 }
