@@ -1,79 +1,74 @@
-.nav {
+nav {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  position: relative;
-
-  margin: 1rem;
+  align-items: center;
+  padding: 0 20px;
+  background-color: white;
+  color: white;
+  top: 0;
+  margin-bottom: 20px;
 }
 
-.nav__toggle,
-.nav__close {
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-
-.nav__cta {
-  background-color: var(--first-color);
-  color: var(--title-color);
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  padding: 0.75rem 1.5rem;
-}
-.nav-list {
+.show-navigation {
   display: flex;
   flex-direction: column;
-  row-gap: 2.5rem;
-}
-
-.nav__link {
-  color: var(--title-color);
-  font-weight: var(--font-semi-bold);
-  transition: color 0.4s;
-}
-
-.nav__link:hover {
-  color: var(--first-color);
-}
-
-.nav__close {
+  gap: 1rem;
+  text-align: left;
+  padding: 10px;
+  font-size: 20px;
   position: absolute;
-  top: 1rem;
-  right: 1.5rem;
+  background-color: white;
+  height: 100vh;
+  width: 50vw;
+  top: 40px;
+  left: 0;
+  opacity: 1;
+  transition: opacity 0.3s ease;
 }
 
-.show-menu {
-  right: 0;
+.hide-navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: left;
+  padding: 10px;
+  font-size: 20px;
+  position: absolute;
+  background-color: white;
+  height: 0;
+  width: 50vw;
+  top: -400px;
+  height: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -900;
 }
 
-@media screen and (max-width: 1150px) {
-  .nav-menu {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    background-color: hsla(0, 0%, 6%, 0.2);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    width: 80%;
-    height: 100%;
-    padding: 6rem 3rem 0;
-    transition: right 0.4s;
-  }
+.animation {
+  transition: all 0.3s ease;
 }
 
-@media screen and (min-width: 1150px) {
-  .nav {
-    height: calc(var(--header-height) + 1rem);
-  }
-  .nav__toggle,
-  .nav__close {
+/* Hide on mobile devices */
+@media (max-width: 768px) {
+  .hide-on-mobile {
     display: none;
   }
+}
 
-  .nav-list {
-    flex-direction: row;
-    column-gap: 2.5rem;
+.mobile-menu {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  text-align: right;
+  align-items: end;
+  padding: 10px;
+  justify-content: end;
+}
+
+/* Hide on desktop devices */
+@media (min-width: 769px) {
+  .mobile-menu {
+    display: none;
   }
 }

@@ -15,10 +15,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-a:hover {
-  color: #535bf2;
-}
-
 body {
   margin: 0;
   padding: 0;
@@ -50,8 +46,8 @@ h3 {
   margin-bottom: 10px; /* Espaciado personalizado */
 }
 p {
-  font-size: 18px;
-  line-height: 1.5;
+  font-size: 22px;
+  line-height: 1.1;
   margin-bottom: 10px; /* Espaciado personalizado */
 }
 
@@ -89,24 +85,55 @@ ul {
 
 a {
   text-decoration: none;
+  color: var(--color-gray-dark);
 }
 
 button {
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
-  font-size: 1em;
+  font-size: 18px;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
   cursor: pointer;
+  font-weight: 700;
   transition: border-color 0.25s;
+  transition: all 0.5s;
 }
 button:hover {
-  border-color: #646cff;
+  border-color: var(--color-primary-light);
+  background-color: var(--color-gray);
+  color: var(--color-primary);
 }
 button:focus,
 button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.type-submit {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 24px;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+  cursor: pointer;
+  font-weight: 700;
+  transition: border-color 0.25s;
+  transition: all 0.5s;
+}
+
+.type-submit:hover {
+  border-color: var(--color-primary-light);
+  background-color: var(--color-gray);
+  color: var(--color-primary);
+}
+.type-submit:focus,
+.type-submit:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
@@ -154,11 +181,5 @@ button:focus-visible {
   :root {
     color: #213547;
     background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
   }
 }

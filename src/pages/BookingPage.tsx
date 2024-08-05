@@ -4,13 +4,19 @@ import { Hero } from '../components/Hero'
 
 interface Props {
   availableTimes: string[]
+  fetchAvailableTimes: (date: Date) => void
+  submitForm: (data: any) => void
 }
 
-export const BookingPage = ({ availableTimes }: Props) => {
+export const BookingPage = ({ availableTimes, fetchAvailableTimes, submitForm }: Props) => {
   return (
     <div>
-      <Hero />
-      <BookingForm availableTimes={availableTimes} />
+      <Hero cta={false} />
+      <BookingForm
+        availableTimes={availableTimes}
+        fetchAvailableTimes={fetchAvailableTimes}
+        submitForm={submitForm}
+      />
     </div>
   )
 }

@@ -1,0 +1,10 @@
+/* styles.css */
+.margin-mobile {
+    margin-top: 220px;
+  }
+  
+  @media (max-width: 768px) {
+    .margin-mobile {
+      margin-top: 0;
+    }
+  }

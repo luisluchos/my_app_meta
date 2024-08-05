@@ -1,0 +1,35 @@
+/* Hide images on mobile devices */
+@media only screen and (max-width: 768px) {
+  .image-container {
+    display: none;
+  }
+}
+
+/* Ensure images are properly positioned on larger screens */
+.image-container {
+  position: relative;
+}
+
+.image-first,
+.image-second {
+  position: absolute;
+  border-radius: 5%;
+  object-fit: cover;
+}
+
+.image-first {
+  object-fit: cover;
+  right: 200px;
+  z-index: 10;
+  width: 272px;
+  height: 338px;
+  top: 50px;
+}
+
+.image-second {
+  right: 0;
+  z-index: 20;
+  width: 272px;
+  height: 338px;
+  top: 0px;
+}
